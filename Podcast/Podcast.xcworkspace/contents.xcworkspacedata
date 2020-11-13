@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../Old projects/Networking/Networking.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Podcast.xcodeproj">
    </FileRef>
    <FileRef

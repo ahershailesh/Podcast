@@ -13,7 +13,7 @@ struct PodcastItem: Decodable {
     let title: String?
     let publisher: String?
     let thumbnail: String?
-    let listenScore: Float?
+    let listenScore: String?
     let listennotesUrl: String?
     let listenScoreGlobalRank: String?
 }

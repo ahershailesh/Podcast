@@ -17,11 +17,15 @@
 		F23238D4255C53E2000F09F9 /* CuratedPodcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23238D3255C53E2000F09F9 /* CuratedPodcast.swift */; };
 		F23238D8255C5480000F09F9 /* PodcastAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23238D7255C5480000F09F9 /* PodcastAPIService.swift */; };
 		F23238DC255C5542000F09F9 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23238DB255C5542000F09F9 /* HomeModule.swift */; };
+		F243C144255EF9B100746738 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243C143255EF9B100746738 /* Launcher.swift */; };
+		F243C147255EFFFE00746738 /* ListenAPIAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243C146255EFFFE00746738 /* ListenAPIAuthorizer.swift */; };
+		F243C14A255F024100746738 /* MockPodcastAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243C149255F024100746738 /* MockPodcastAPIService.swift */; };
 		F272215E255C20170016107B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272215D255C20170016107B /* AppDelegate.swift */; };
 		F2722162255C20170016107B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2722161255C20170016107B /* HomeViewController.swift */; };
 		F2722167255C20190016107B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2722166255C20190016107B /* Assets.xcassets */; };
 		F272216A255C20190016107B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2722168255C20190016107B /* LaunchScreen.storyboard */; };
 		F2E94577255E6F6900879627 /* CuratedListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E94576255E6F6900879627 /* CuratedListResponse.json */; };
+		F2E945A2255E778A00879627 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E945A1255E778A00879627 /* Networking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,9 @@
 		F23238D3255C53E2000F09F9 /* CuratedPodcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedPodcast.swift; sourceTree = "<group>"; };
 		F23238D7255C5480000F09F9 /* PodcastAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastAPIService.swift; sourceTree = "<group>"; };
 		F23238DB255C5542000F09F9 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		F243C143255EF9B100746738 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		F243C146255EFFFE00746738 /* ListenAPIAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenAPIAuthorizer.swift; sourceTree = "<group>"; };
+		F243C149255F024100746738 /* MockPodcastAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPodcastAPIService.swift; sourceTree = "<group>"; };
 		F272215A255C20170016107B /* Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F272215D255C20170016107B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2722161255C20170016107B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 		F2722169255C20190016107B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F272216B255C20190016107B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E94576255E6F6900879627 /* CuratedListResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CuratedListResponse.json; sourceTree = "<group>"; };
+		F2E945A1255E778A00879627 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E945A2255E778A00879627 /* Networking.framework in Frameworks */,
 				1DCCDE19019CDF919FA8D3AB /* Pods_Podcast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +70,7 @@
 		42A07FA416323EFADE6CA3AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2E945A1255E778A00879627 /* Networking.framework */,
 				2C843A740B15B2821AC4D9B7 /* Pods_Podcast.framework */,
 			);
 			name = Frameworks;
@@ -143,6 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				F23238D7255C5480000F09F9 /* PodcastAPIService.swift */,
+				F243C143255EF9B100746738 /* Launcher.swift */,
+				F243C146255EFFFE00746738 /* ListenAPIAuthorizer.swift */,
+				F243C149255F024100746738 /* MockPodcastAPIService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -249,11 +262,14 @@
 				F23238D4255C53E2000F09F9 /* CuratedPodcast.swift in Sources */,
 				F23238C7255C4637000F09F9 /* PodcastCollectionViewCell.swift in Sources */,
 				F23238DC255C5542000F09F9 /* HomeModule.swift in Sources */,
+				F243C147255EFFFE00746738 /* ListenAPIAuthorizer.swift in Sources */,
 				F23238CA255C4F1B000F09F9 /* PodcastItem.swift in Sources */,
+				F243C14A255F024100746738 /* MockPodcastAPIService.swift in Sources */,
 				F2722162255C20170016107B /* HomeViewController.swift in Sources */,
 				F23238C4255C3191000F09F9 /* PodcastListManager.swift in Sources */,
 				F23238BE255C2727000F09F9 /* Extensions.swift in Sources */,
 				F272215E255C20170016107B /* AppDelegate.swift in Sources */,
+				F243C144255EF9B100746738 /* Launcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

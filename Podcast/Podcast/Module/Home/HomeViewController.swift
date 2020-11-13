@@ -9,8 +9,7 @@ import UIKit
 
 
 protocol HomeViewRepresentable {
-    func loadData(completionBlock: ((Result<TableViewReloadType, Error>) -> Void))
-    func fetchNextPage(completionBlock: (() -> Void))
+    func fetchData(completionBlock: @escaping ((Result<TableViewReloadType, Error>) -> Void))
     
     var sectons: [PodcastCategoryTableViewCellRepresentable] { get }
 }
@@ -20,28 +19,24 @@ enum TableViewReloadType {
 }
 
 class HomeViewModel: HomeViewRepresentable {
-    private let interactor: PodcastAPIService
+    private let interactor: IPodcastService
     
     private(set) var sectons: [PodcastCategoryTableViewCellRepresentable] = []
     
-    init(interactor: PodcastAPIService = PodcastAPIService()) {
+    init(interactor: IPodcastService) {
         self.interactor = interactor
     }
     
-    func loadData(completionBlock: ((Result<TableViewReloadType, Error>) -> Void)) {
-        interactor.fetchData { (result) in
+    func fetchData(completionBlock: @escaping ((Result<TableViewReloadType, Error>) -> Void)) {
+        interactor.fetchCuratedList(page: 0) { [weak self] (result) in
             switch result {
             case .success(let curatedPodcast):
-                sectons = curatedPodcast.curatedLists.map { PodcastCategoryTableViewCellViewModel(podcastList: $0) }
+                self?.sectons = curatedPodcast.curatedLists.map { PodcastCategoryTableViewCellViewModel(podcastList: $0) }
                 completionBlock(.success(.reload))
             case .failure(let error):
                 break
             }
         }
-    }
-    
-    func fetchNextPage(completionBlock: (() -> Void)) {
-        
     }
 }
 
@@ -59,7 +54,7 @@ class HomeViewController: UIViewController {
     
     func setup(viewModel: HomeViewRepresentable) {
         self.viewModel = viewModel
-        viewModel.loadData { [weak self] _ in
+        viewModel.fetchData { [weak self] _ in
             self?.tableView.reloadData()
         }
     }
